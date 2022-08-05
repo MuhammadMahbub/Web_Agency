@@ -1,0 +1,143 @@
+.pricing-plan {
+  text-align: center;
+  padding: 40px 40px 10px;
+  margin-top: 21px;
+  margin-bottom: 0;
+
+  .price-wrap {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 20px;
+    line-height: 0.7;
+    margin: 60px 0 10px;
+
+    &[class*='bg-'] {
+      padding: 30px 30px 10px;
+      margin-top: 50px;
+      margin-bottom: 0;
+    }
+    .plan-price {
+      font-size: 54px;
+      font-weight: 500;
+    }
+  }
+  [class*='bg-'] {
+    padding: 10px 30px 30px;
+    margin-left: -41px;
+    margin-right: -41px;
+  }
+  .plan-name {
+    &[class*='bg-'] {
+      padding-top: 30px;
+      margin-top: -40px;
+    }
+    h3 {
+      text-transform: none;
+      font-size: 24px;
+      font-weight: 500;
+      text-align: center;
+      margin: 0;
+      color: #fff;
+    }
+  }
+
+  @media(min-width: 1200px) {
+    padding: 0 60px 10px;
+    [class*='bg-'] {
+      margin-left: -61px;
+      margin-right: -61px;
+    }
+    .plan-name[class*='bg-'] {
+      margin-top: -57px;
+    }
+  }
+
+  .plan-features {
+    margin: 60px 0 20px;
+    li {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border-color: rgba(164, 169, 185, 0.3);
+    }
+  }
+
+  .plan-button {
+    position: relative;
+    top: 38px;
+   .inverse-color1 {
+      border-color: #a0ce4e;
+      background-color: #f4f4f5;
+      &:hover {
+        background-color: #a0ce4e;
+        border-color: #a0ce4e;
+        color: #fff
+      }
+    }
+     .inverse-color2 {
+      border-color: #00bea3;
+      background-color: #f4f4f5;
+      &:hover {
+        background-color: #00bea3;
+        border-color: #00bea3;
+        color: #f4f4f5
+      }
+    }
+     .inverse-color3 {
+      border-color: #f1894c;
+      background-color: #f4f4f5;
+      &:hover {
+        background-color: #f1894c;
+        border-color: #f1894c;
+        color: #f4f4f5
+      }
+    }
+  }
+
+  //featured border
+  &.plan-featured {
+    margin-top: -5px;
+    background-color: #1f2732;
+    .plan-button {
+      top: 38px;
+    }
+  }
+}
+.plan-name {
+
+  margin: 0 -60px;
+  padding: 25px;
+   @media (max-width: 1199px) { 
+    margin: -40px -40px 0;
+  }
+}
+
+.color1 {
+  @media (max-width: 991px) { 
+    margin-bottom: 30px;
+  }
+} .plan-name  {
+  background-color: #a0ce4e;
+  
+}
+
+.color2 .plan-name  {
+  background-color: #00bea3;
+}
+
+.color3 .plan-name  {
+  background-color: #f1894c;
+}
+
+.plan-description {
+  display: block;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  text-align: center;
+  margin-top: 20px;
+  line-height: 1;
+}

@@ -1,0 +1,137 @@
+/* Mobile menu toggler */
+@media(min-width: 1200px) {
+  .page_header,
+  .page_toplogo {
+    .toggle_menu {
+      display: none;
+    }
+  }
+}
+
+.toggle_menu {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-left: -30px;
+  margin-top: -30px;
+  padding: 0 !important;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  z-index: 1002;
+  visibility: visible;
+  opacity: 0.95;
+  //for pages with multiple demo - more z-index value for first toggler
+  //1002 - for .top-nav
+  .page_header_wrapper & {
+    z-index: 1003;
+  }
+
+  .ls & {
+    background-color: $lightColor;
+    &:before,
+    span,
+    span:before,
+    span:after {
+      background-color: $darkgreyColor;
+    }
+  }
+
+  .page_toplogo & {
+    position: fixed;
+    top: 0;
+    left: auto;
+    right: 0;
+    margin: 0;
+  }
+
+  &:hover span:before {
+    top: 13px;
+    transform: rotate(45deg);
+  }
+  &:hover span:after {
+    top: 13px;
+    transform: rotate(-45deg);
+  }
+
+  &:before,
+  span,
+  span:before,
+  span:after {
+    display: block;
+    width: 31px;
+    position: absolute;
+    background-color: $lightColor;
+    content: '';
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+    height: 2px;
+  }
+  &:before,
+  span {
+    left: 13px;
+    top: 24%;
+    content: 'menu';
+    width: 0;
+    font-size: 9px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 1px;
+  }
+  span:before {
+    opacity: 1;
+    top: 0px;
+  }
+
+  span:after {
+    opacity: 1;
+    top: 28px;
+  }
+
+  //mobile active
+  &.mobile-active {
+    background-color: $colorMain;
+    border: none;
+    left: auto;
+    top: 0;
+    right: 0;
+    position: fixed;
+    margin: 0;
+    z-index: 3000;
+    &:before {
+      background-color: $lightColor;
+    }
+
+    span {
+      background-color: $lightColor;
+    }
+    span:before,
+    span:after {
+      opacity: 1;
+    }
+  }
+  //side header
+  &.active {
+    
+
+   
+    span:before,
+    span:after {
+      opacity: 1;
+    }
+  }
+}
+  
+.toggle_menu:hover:before {
+  top: 32px;
+}
+
+.ls .toggle_menu:before, .toggle_menu span {
+  color: #fff;
+}
+
+.toggle_menu.toggle_menu_side.ds {
+  background-color: transparent; 
+}

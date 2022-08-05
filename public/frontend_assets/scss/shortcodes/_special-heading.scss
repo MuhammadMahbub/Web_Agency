@@ -1,0 +1,60 @@
+/*
+** Special Heading
+*/
+.special-heading {
+  word-wrap: break-word;
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 1;
+  &.text-lowercase {
+    font-size: 62px;
+    font-weight: 300;
+    margin-bottom: 0;
+    line-height: 1.1;
+  }
+  &.big,
+  &.text-uppercase {
+    font-size: 62px;
+    font-weight: 900;
+    line-height: 0.8;
+  }
+  &.big {
+    margin-top: 0.65em;
+    margin-bottom: 0.65em;
+  }
+  @media (max-width: 1200px) {
+    &.big,
+    &.text-lowercase,
+    &.text-uppercase {
+      font-size: 32px;
+      line-height: 1;
+    }
+  }
+
+  & + h3 {
+    margin-top: -1em;
+  }
+
+  & + p {
+    @include small-text();
+    @media(min-width: 1200px) {
+      &.extra-letter-spacing {
+        letter-spacing: 2em;
+      }
+    }
+  }
+  &.text-center + p {
+    text-align: center;
+  }
+
+  h3.small & {
+    line-height: 1;
+    font-size: 38px;
+  }
+
+}
+
+h3.small {
+  font-size: 20px;
+  margin-bottom: 36px;
+}

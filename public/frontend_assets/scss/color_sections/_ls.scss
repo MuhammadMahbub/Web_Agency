@@ -1,0 +1,134 @@
+/*
+** Light Background Section - .ls
+*/
+.ls {
+  background-color: $lightColor;
+  color: #7f7f7f;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #1f2732;
+    a {
+      color: inherit;
+      &:hover {
+        color: $colorMain;
+      }
+    }
+  }
+
+  //buttons
+  .btn-maincolor:hover,
+  .btn-maincolor2:hover,
+  .btn-maincolor3:hover,
+  .btn-darkgrey:hover,
+  .btn-outline-maincolor:hover,
+  .btn-outline-maincolor2:hover,
+  .btn-outline-maincolor3:hover,
+  .btn-outline-darkgrey:hover {
+    color: $lightColor;
+  }
+  .btn-outline-maincolor:hover {
+    background-color: $colorMain;
+  }
+
+.btn-maincolor:hover {
+    background-color: #fff;
+    color: $colorMain;
+  }
+
+  .btn-outline-maincolor2:hover {
+    background-color: $colorMain2;
+  }
+  .btn-maincolor2:hover {
+      background-color: #fff;
+      color: $colorMain2;
+  }
+  .btn-outline-maincolor3:hover {
+    background-color: $colorMain3;
+  }
+  .btn-maincolor3:hover {
+    background-color: #fff;
+    color: $colorMain3;
+  }
+  .btn-outline-darkgrey:hover {
+    background-color: $colorMain;
+  }
+  .btn-darkgrey:hover {
+    background-color: $colorMain;
+    border-color: $colorMain;
+  }
+  .links-maincolor a:hover {
+    opacity: 0.7;
+  }
+}
+
+/*
+** Grey Background Section - light section, muted section - .ls.ms
+*/
+.ls.ms {
+  background-color: #f4f4f5;
+  color: darken($fontColor, 7%);
+
+  .links-grey a {
+    color: darken($fontColor, 7%);
+  }
+
+  .hero-bg {
+    background-color: $lightColor;
+    hr {
+      background-color: $borderColor;
+    }
+  }
+
+  hr {
+    background-color: $lightColor;
+  }
+
+  //forms
+  input[type="text"],
+  input[type="email"],
+  input[type="url"],
+  input[type="password"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="number"],
+  textarea,
+  select,
+  .form-control {
+    background-color: $lightColor;
+  }
+
+  // .ls:not(.ms),
+  .hero-bg {
+    input[type="text"],
+    input[type="email"],
+    input[type="url"],
+    input[type="password"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="number"],
+    textarea,
+    select,
+    .form-control {
+      border-color: $borderColor;
+      background-color: $greyColor;
+    }
+  }
+  td,
+  th,
+  .bordered {
+    border-color: darken($borderColor, 5%);
+  }
+
+  .btn-secondary {
+    border-color: $lightColor;
+    &:hover {
+      border-color: darken($greyColor, 6%);
+      background-color: darken($greyColor, 6%);
+    }
+  }
+}
+

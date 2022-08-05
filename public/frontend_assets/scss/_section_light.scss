@@ -1,0 +1,13 @@
+.ls {
+
+  .color-icon.bg-icon {
+    background-color: #fff;
+  }
+
+  .pricing-plan [class*='btn-outline-'] {
+    background-color: $lightColor;
+    &:hover {
+      background-color: $colorMain;
+    }
+  }
+}

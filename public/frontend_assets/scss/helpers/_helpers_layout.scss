@@ -1,0 +1,143 @@
+/* layout */
+.clear, .clearfix {
+  clear: both;
+}
+
+.round {
+  border-radius: 50%;
+}
+
+.text-normal {
+  text-transform: none;
+}
+
+/* paddings for .*-bg, .bg-* and .bordered */
+.p-big {
+  padding: 40px 45px;
+  @media(min-width: 1200px) {
+    padding: 55px 60px;
+  }
+}
+
+.p-normal {
+  padding: 40px 45px;
+}
+
+.p-small {
+  padding: 30px 35px;
+}
+
+.cover-before,
+.cover-after {
+  overflow: hidden;
+}
+
+.cover-before,
+.cover-after,
+.cover-before > *,
+.cover-after > * {
+  position: relative;
+  z-index: 2;
+}
+
+.cover-before:before,
+.cover-after:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.top-corner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 1;
+}
+
+/* text helpers */
+//.fs-XX { font-size: XXpx }
+@each $value in $font-size-helpers {
+  .fs-#{$value} {
+    font-size: #{$value}px;
+  }
+}
+
+.fw-100 {
+  font-weight: 100;
+}
+
+.fw-300,
+.thin {
+  font-weight: 300;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.fw-700,
+.bolder {
+  font-weight: 700;
+}
+
+.fw-900,
+.bold {
+  font-weight: 900;
+}
+
+.dropcap {
+  font-size: 110px;
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 0.9;
+  margin: 0 15px 0 0;
+  float: left;
+
+  @media (max-width: 1199px) {
+    font-size: 50px;
+    line-height: 1.1;
+    margin-right: 15px;
+  }
+}
+
+/*alignment helpers*/
+.d-table {
+  display: table;
+  min-width: 100%;
+  height: 100%;
+  margin: auto;
+  border-collapse: collapse;
+}
+
+.d-table-cell {
+  display: table-cell;
+  vertical-align: middle;
+  float: none;
+  overflow: hidden;
+  zoom: 1;
+  box-sizing: border-box;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+}
+
+.overflow-visible {
+  overflow: visible;
+  position: relative;
+  z-index: 2;
+}
+
+.z-index-2 {
+  z-index: 2;
+}

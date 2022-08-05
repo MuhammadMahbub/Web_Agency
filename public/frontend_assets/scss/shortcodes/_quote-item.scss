@@ -1,0 +1,42 @@
+.quote-item {
+  text-align: center;
+  border: none;
+  padding: 20px 0;
+  @media (min-width: 768px) {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 70%;
+  }
+}
+
+.quote-image {
+  position: relative;
+  display: inline-block;
+
+  &:after {
+    position: absolute;
+    color: $colorMain;
+    background-color: $lightColor;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    line-height: 60px;
+    border-radius: 50%;
+    bottom: 0;
+    right: 10px;
+  }
+  &.border-none img {
+    padding: 0;
+  }
+  img {
+    border-radius: 50%;
+    box-shadow: $boxShadow;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 9px;
+  }
+  //testimonial author
+  & + p {
+    margin: 30px 0 20px;
+  }
+
+}

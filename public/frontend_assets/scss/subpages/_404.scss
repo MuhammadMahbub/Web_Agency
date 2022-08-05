@@ -1,0 +1,46 @@
+/*
+** 404
+*/
+
+.error-404 {
+  margin-top: -60px;
+  background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  a.btn:hover {
+    background-color: transparent;
+  }
+  .page-header {
+    h3 {
+      font-size: 100px;
+      font-family: 'Poppins', sans-serif;
+      line-height: 1;
+      margin: 0;
+      @media (min-width: 992px) {
+        font-size: 238px;
+      }
+    }
+    p {
+      letter-spacing: 0.1em;
+      font-size: 36px;
+      color: #1f2732;
+      font-weight: 500;
+    }
+  }
+
+  .widget_search {
+    margin: 38px 0 31px;
+  }
+}
+
+.page_404 .page-header  {
+  min-height: 490px;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  @media (max-width: 991px) {
+    min-height: 400px;
+  }
+}
+

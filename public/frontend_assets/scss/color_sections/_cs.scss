@@ -1,0 +1,223 @@
+/*
+** Color Background Section - .cs
+*/
+.cs.cs2 {
+  background-color: $colorMain2;
+  .color-main {
+    color: $colorMain;
+  }
+}
+
+.cs.cs3 {
+  background-color: $colorMain3;
+  .color-main {
+    color: $colorMain;
+  }
+}
+
+/* color section grey - .cs.gs */
+.cs.gs {
+  background-color: #aaa6a7;
+}
+
+.cs.cs-success {
+  background-color: $colorSuccess;
+}
+
+.cs.cs-info {
+  background-color: $colorInfo;
+}
+
+.cs.cs-warning {
+  background-color: $colorWarning;
+}
+
+.cs.cs-danger {
+  background-color: $colorDanger;
+}
+
+.cs {
+  background-color: $colorMain;
+  color: $lightColor;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $lightColor;
+
+    a {
+      color: $lightColor;
+      &:hover {
+        color: rgba($lightColor, 0.6);
+      }
+    }
+  }
+
+  a:not(.btn) {
+    color: $lightColor;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  blockquote, .blockquote {
+    border-color: lighten($colorMain, 10%);
+  }
+  hr {
+    border-color: $colorBorderColor;
+  }
+
+  pre {
+    color: $lightColor;
+  }
+
+  .hero-bg {
+    background-color: $colorBackgroundColor;
+  }
+  .bordered {
+    border-color: $colorBorderColor;
+  }
+
+  //sections with borders
+  &.s-bordertop:before,
+  &.s-borderbottom:after,
+  &.s-bordertop-container .container:before,
+  &.s-borderbottom-container .container:after {
+    background-color: $colorBorderColor;
+
+  }
+  &.s-bordered-columns {
+    [class*='col-'] + [class*='col-']:before {
+      background-color: $colorBorderColor;
+    }
+  }
+  .links-darkgrey a,
+  .links-grey a {
+    color: $lightColor;
+    opacity: 0.9;
+    &:hover {
+      opacity: 1;
+      color: $lightColor;
+    }
+  }
+
+  .color-dark {
+    border-color: $lightColor;
+    color: $lightColor;
+  }
+
+  .color-darkgrey {
+    border-color: $darkgreyColor;
+    color: $darkgreyColor;
+  }
+  .response,
+  .color-main {
+    color: $lightColor;
+  }
+
+  //forms
+  input[type="text"],
+  input[type="email"],
+  input[type="url"],
+  input[type="password"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="number"],
+  textarea,
+  select,
+  .form-control {
+    color: $darkgreyColor;
+    background-color: $lightColor;
+    border-color: $lightColor;
+  }
+
+  .form-control:focus {
+    border-color: rgba($lightColor, 0.5);
+  }
+
+  .form-control:-moz-placeholder {
+    color: $darkgreyColor;
+    opacity: 1;
+  }
+  .form-control::-moz-placeholder {
+    color: $darkgreyColor;
+    opacity: 1;
+  }
+
+  .form-control:-ms-input-placeholder {
+    color: $darkgreyColor;
+  }
+
+  .form-control::-webkit-input-placeholder {
+    color: $darkgreyColor;
+  }
+  .form-control:focus:-moz-placeholder {
+    color: transparent;
+  }
+  .form-control:focus::-moz-placeholder {
+    color: transparent;
+  }
+
+  .form-control:focus:-ms-input-placeholder {
+    color: transparent;
+  }
+
+  .form-control:focus::-webkit-input-placeholder {
+    color: transparent;
+  }
+
+  //buttons
+  .btn-maincolor {
+    background-color: $lightColor;
+    color: $darkgreyColor;
+  }
+  .btn-outline-maincolor {
+    border-color: $lightColor;
+    color: $lightColor;
+  }
+  .btn-maincolor:hover,
+  .btn-maincolor2:hover,
+  .btn-maincolor3:hover,
+  .btn-darkgrey:hover,
+  .btn-outline-maincolor:hover,
+  .btn-outline-maincolor2:hover,
+  .btn-outline-maincolor3:hover,
+  .btn-outline-darkgrey:hover {
+    color: $lightColor;
+  }
+  .btn-outline-maincolor:hover,
+  .btn-maincolor:hover {
+    border-color: darken($colorMain, 10%);
+    background-color: darken($colorMain, 10%);
+  }
+  .btn-outline-maincolor2:hover,
+  .btn-maincolor2:hover {
+    background-color: darken($colorMain2, 10%);
+  }
+  .btn-outline-maincolor3:hover,
+  .btn-maincolor3:hover {
+    background-color: darken($colorMain3, 10%);
+  }
+  .btn-outline-darkgrey:hover,
+  .btn-darkgrey:hover {
+    background-color: darken($darkgreyColor, 10%);
+    border-color: darken($darkgreyColor, 10%);
+  }
+
+  //social icons
+  a.fa {
+    color: $lightColor;
+    border-color: $colorBorderColor;
+  }
+  a.bg-icon {
+    background-color: rgba($colorBackgroundColor, 0.17);
+  }
+  .color-icon.bg-icon {
+    background-color: rgba($colorBackgroundColor, 0.9);
+  }
+  a.fa.color-bg-icon:hover {
+    background-color: $darkgreyColor;
+
+  }
+}

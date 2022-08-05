@@ -1,0 +1,173 @@
+/*
+** WordPress Page Links and Pagination
+*/
+.page-item,
+.nav-links,
+.page-links {
+  clear: both;
+  & > span,
+  & > a {
+    border: 4px solid #f4f4f5;
+    border-radius: 50% !important;
+    color: #1f2732;
+    background-color: #fff;
+    display: inline-block;
+    margin-right: 4px;
+    margin-left: 0;
+    padding: 0.5em 1.2em;
+    min-width: 3em;
+    text-align: center;
+    line-height: inherit;
+    &:hover {
+      background-color: $colorMain;
+      color: $lightColor;
+      border: 4px solid $colorMain;
+    }
+  }
+  &.active > a,
+  & > span {
+    background-color: #1f2732 !important;
+    border: 4px solid #1f2732;
+    color: #fff;
+    cursor: not-allowed;
+    &:hover {
+       border: 4px solid #1f2732;
+    }
+  }
+  .fa {
+    font-size: 10px;
+  }
+}
+
+//page and comments links smaller
+.comments-pagination,
+.page-links {
+  .page-numbers,
+  & > span,
+  a {
+    //min-width: 2em;
+  }
+}
+
+.page-links a:first-child {
+  margin-left: 1em;
+}
+
+//blog styles
+.pagination {
+  margin-top: 60px;
+  justify-content: center;
+  @media (max-width: 767px) {
+    margin-top: 20px;
+  }
+}
+
+//blog post
+.post-nav {
+  margin: 30px 0 0;
+  position: relative;
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    & > div {
+      width: 48.6%;
+      height: auto;
+      //display: flex;
+      //align-items: center;
+      //justify-content: center;
+      position: relative;
+      padding: 60px;
+      text-align: right;
+
+      transition: 0.2s opacity ease;
+      &:hover {
+        opacity: 0.9;
+      }
+      @media(max-width: 575px) {
+        width: 100%;
+      }
+      .fa {
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+      }
+      &:first-child {
+        text-align: left;
+        .fa {
+          right: auto;
+          left: 0;
+        }
+      }
+    }
+    .nav-subtitle {
+      @include small-text();
+      text-align: center;
+      min-width: 8em;
+      padding: 0.25em 1em 0.05em;
+      display: inline-block;
+    }
+    .nav-title {
+      display: block;
+      line-height: 20px;
+      color: #fff;
+      font-weight: 500;
+      margin-top: 8px;
+    }
+
+    a {
+      @include cover();
+
+    }
+  }
+  //for .cover-image
+  .post-nav-image {
+    display: none;
+  }
+  .cover-image {
+    .post-nav-text-wrap {
+      text-align: center;
+    }
+  }
+}
+.nav-links > a.page-numbers {
+
+}
+
+.prev.page-numbers  {
+  border: 4px solid $colorMain;
+  color: #ffffff;
+  background-color: $colorMain;
+  &:hover {
+    background-color: #1f2732;
+    color: #fff;
+    border: 4px solid #1f2732;
+  }
+}
+
+.next.page-numbers  {
+  border: 4px solid $colorMain;
+  color: #ffffff;
+  background-color: $colorMain;
+  &:hover {
+    background-color: #1f2732;
+    color: #fff;
+    border: 4px solid #1f2732;
+  }
+}
+
+.nav-links .active:hover {
+  border: 4px solid $colorMain;
+}
+
+.next {
+  margin-left: 20px;
+   @media (max-width: 767px) {
+      margin: 20px 0 0;
+    }
+}
+
+.navigation.post-nav .s-overlay.ds {
+  background-color:  #000;
+}

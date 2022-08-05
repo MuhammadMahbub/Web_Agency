@@ -1,0 +1,67 @@
+/* bootstrap breadcrumbs*/
+.breadcrumb {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border-radius: 0;
+  text-transform: uppercase;
+  color: inherit;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  & > li {
+    display: inline-block;
+    padding: 0;
+    float: none;
+  }
+
+  .text-center & {
+    justify-content: center;
+  }
+  @media (min-width: 992px) {
+    .text-lg-right & {
+      justify-content: flex-end;
+    }
+  }
+ 
+}
+
+.breadcrumb > .active {
+  color: inherit;
+  opacity: 0.9;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  color: inherit;
+  padding: 0 11px;
+}
+
+
+.layout-2 {
+  .breadcrumb {
+    justify-content: end;
+    @media (max-width: 992px) {
+       justify-content: center;
+    }
+    .breadcrumb-item + .breadcrumb-item::before {
+      font-family: FontAwesome;
+      color: #1f2732;
+      padding: 0 7px;
+      content: "\f054";
+      font-size: 7px;
+      position: relative;
+      top: -1px;
+    }
+  }
+  .widget_search form {
+    @media (max-width: 992px) {
+      margin: 15px auto 0;
+      float: none;
+    }
+    float: right;
+    margin: 0;
+   .form-control {
+    text-align: left;
+   }
+  }
+}

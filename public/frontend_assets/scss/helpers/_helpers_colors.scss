@@ -1,0 +1,167 @@
+/* borders, colors and backgrounds */
+.light-bg {
+  background-color: $lightColor;
+}
+
+.hero-bg {
+  background-color: $backgroundColor;
+}
+
+.muted-bg {
+  background-color: rgba($darkgreyColor, 0.06);
+}
+
+.response,
+.color-main {
+  color: $colorMain !important;
+  border-color: $colorMain;
+}
+
+.color-main2 {
+  color: $colorMain2 !important;
+  border-color: $colorMain2;
+}
+
+.color-main3 {
+  color: $colorMain3 !important;
+  border-color: $colorMain3;
+}
+
+.color-main4 {
+  color: $colorMain4 !important;
+  border-color: $colorMain4;
+}
+
+.color-dark {
+  color: $darkColor;
+  border-color: $darkColor;
+}
+
+.color-darkgrey {
+  color: $darkgreyColor;
+  border-color: $darkgreyColor;
+}
+
+//bootstrap colors
+.color-success {
+  color: $colorSuccess;
+}
+
+.color-info {
+  color: $colorInfo;
+}
+
+.color-light {
+  color: $lightColor;
+}
+
+.color-warning {
+  color: $colorWarning;
+}
+
+.required,
+.color-danger {
+  color: $colorDanger;
+}
+
+.bordered {
+  border: 1px solid $borderColor;
+}
+
+.box-shadow {
+  border-color: transparent;
+  box-shadow: $boxShadow;
+}
+
+.links-maincolor a {
+  color: $colorMain;
+}
+
+.links-maincolor2 a {
+  color: $colorMain2;
+}
+
+.links-maincolor3 a {
+  color: $colorMain3;
+}
+
+.links-grey a {
+  color: $fontColor;
+  &:hover {
+    color: $colorMain;
+  }
+}
+
+.links-darkgrey a {
+  color: $darkgreyColor;
+  &:hover {
+    color: $colorMain;
+  }
+}
+
+//theme background colors
+.bg-maincolor {
+  background-color: $colorMain;
+}
+
+.bg-maincolor2 {
+  background-color: $colorMain2;
+}
+
+.bg-maincolor3 {
+  background-color: $colorMain3;
+}
+
+.bg-maincolor4 {
+  background-color: $colorMain4;
+}
+
+
+.bg-dark {
+  background-color: $darkColor;
+}
+
+.bg-darkblue {
+  color: $lightColor;
+  background-color: $darkBlueColor;
+}
+
+.bg-darkgrey {
+  color: $lightColor;
+  background-color: $darkgreyColor;
+}
+
+//bootstrap background colors
+.bg-success {
+  background-color: $colorSuccess !important;
+}
+
+.bg-info {
+  background-color: $colorInfo !important;
+}
+
+.bg-warning {
+  background-color: $colorWarning !important;
+}
+
+.bg-danger {
+  background-color: $colorDanger !important;
+}
+
+//setting colors for elements inside color or dark background to light color - add :not('.bg-faded')?
+[class*='bg-'] {
+  color: $lightColor;
+  a, h1, h2, h3, h4, h5, h6 {
+    color: $lightColor;
+  }
+}
+
+/*padding for inline elements with theme backgrounds*/
+span[class*='bg-'],
+span.bordered,
+span.light-bg,
+span.hero-bg,
+span.muted-bg {
+  padding-left: 0.37em;
+  padding-right: 0.37em;
+}
