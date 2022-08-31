@@ -16,17 +16,17 @@ class GalleryNameSeeder extends Seeder
     public function run()
     {
         GalleryName::create([
-            'gallery_name' => 'Web Design',
+            'gallery_name' => 'Conception Web',
             'created_at' => Carbon::now(),
         ]);
 
         GalleryName::create([
-            'gallery_name' => 'Web Development',
+            'gallery_name' => 'Développement web',
             'created_at' => Carbon::now(),
         ]);
 
         GalleryName::create([
-            'gallery_name' => 'Graphics Design',
+            'gallery_name' => 'Conception graphique',
             'created_at' => Carbon::now(),
         ]);
     }

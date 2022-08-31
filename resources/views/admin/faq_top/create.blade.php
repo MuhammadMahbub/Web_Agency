@@ -80,7 +80,7 @@
 
                           <div class="form-group">
                             <label  for="icon">{{ __('Short Description') }} <span class="text-danger">*</span></label>
-                            <textarea class="form-control" name="description_two" id="description_two" cols="30" rows="10">{{ $all_faq_top_content->description_two }}</textarea>
+                            <textarea class="form-control" name="description_two" id="description_two" cols="30" rows="3">{{ $all_faq_top_content->description_two }}</textarea>
                             @error('description_two')
                                 <span class="text-danger"> {{ $message }} *</span>
                             @enderror
@@ -99,7 +99,7 @@
 
                           <div class="form-group">
                             <label  for="icon">{{ __('Short Description') }} <span class="text-danger">*</span></label>
-                            <textarea class="form-control" name="description_three" id="description_three" cols="30" rows="10">{{ $all_faq_top_content->description_three }}</textarea>
+                            <textarea class="form-control" name="description_three" id="description_three" cols="30" rows="3">{{ $all_faq_top_content->description_three }}</textarea>
                             @error('description_three')
                                 <span class="text-danger"> {{ $message }} *</span>
                             @enderror

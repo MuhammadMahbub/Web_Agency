@@ -16,7 +16,7 @@ class CreateMstretegiesTable extends Migration
         Schema::create('mstretegies', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('description');
+            $table->longText('description')->nullable();
             $table->timestamps();
         });
     }

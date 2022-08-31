@@ -34,7 +34,7 @@ active
                     <h1> {{ titlesettings()->blog_title }}</h1>
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item">
-                            <a href="{{ route('root') }}">Home</a>
+                            <a href="{{ route('root') }}">Accueil</a>
                         </li>
                         <li class="breadcrumb-item active">
                             {{ titlesettings()->blog_title }}
@@ -52,8 +52,8 @@ active
             @if (count($all_blogs) > 0)
 
                 @else
-                <h3 class="text-danger">No Data Found</h3>
-                <a href="{{ route('blog') }}" style="text-decoration: underline; color:blue">Back to Blog</a>
+                <h3 class="text-danger">Aucune donnée trouvée</h3>
+                <a href="{{ route('blog') }}" style="text-decoration: underline; color:blue">Retour au blog</a>
                 {{-- <div class="d-none d-lg-block divider-65"></div> --}}
             @endif
 
@@ -108,11 +108,11 @@ active
 
 
                     <div class="widget widget_search ds texture-ds">
-                        <h6>Search</h6>
+                        <h6>Recherche</h6>
                         <form action="{{ route('search.blogs') }}" method="GET" id="search_form_details">
-                            <input type="search" id="search-form-widget" name="search_value" class="text-left search-field form-control" placeholder="Search Keyword">
+                            <input type="search" id="search-form-widget" name="search_value" class="text-left search-field form-control" placeholder="Recherche de mots-clés">
                             <button type="submit" class="search-submit" id="home_search_details">
-                                <span class="screen-reader-text">Search</span>
+                                <span class="screen-reader-text">Recherche</span>
                             </button>
                         </form>
                     </div>
@@ -121,15 +121,15 @@ active
                     <div class="categories-dropdown">
                         <div class="widget widget_categories dropdown">
 
-                            <h3 class="widget-title">Categories</h3>
+                            <h3 class="widget-title">Catégories</h3>
 
                             <label class="screen-reader-text" for="cat">
-                                Categories dropdown
+                                Liste déroulante des catégories
                             </label>
                             <form action="{{ route('cat.wise.blogs') }}" method="GET" id="cat_search_form">
                                 @csrf
                             <select class="postform" id="category_wise_blog" name="search_value">
-                                <option>Select Category</option>
+                                <option>Sélectionnez une catégorie</option>
                                     @foreach ($blog_categories as $item)
                                      <option class="level-0" value="{{ $item->id }}">{{ $item->category_name }}</option>
                                     @endforeach
@@ -142,7 +142,7 @@ active
 
                     <div class="widget widget_slider">
 
-                        <h3 class="widget-title">Recent Posts</h3>
+                        <h3 class="widget-title">Messages récents</h3>
                         <div class="item-media">
                             <div class="owl-carousel gallery-owl-nav" data-nav="true" data-loop="false" data-autoplay="true" data-items="1" data-responsive-lg="1" data-responsive-md="1" data-responsive-sm="1" data-responsive-xs="1">
 

@@ -64,7 +64,7 @@ class ProcessController extends Controller
 
     public function update(Request $request, Process $process)
     {
-
+        // dd($request->all());
         $request->validate([
             'title'          => 'required',
             'description'    => 'required',
@@ -83,8 +83,8 @@ class ProcessController extends Controller
 
         $process->title       = $request->title;
         $process->description = $request->description;
-        $process->button_text = $request->button_text;
-        $process->button_url = $request->button_url;
+        // $process->button_text = $request->button_text;
+        // $process->button_url = $request->button_url;
 
         $process->save();
 

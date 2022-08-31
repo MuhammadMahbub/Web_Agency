@@ -15,8 +15,8 @@ class FaqUnanswerSeeder extends Seeder
     public function run()
     {
         FaqUnanswerQ::create([
-            'title' => 'Any Unanswered Question?',
-            'button_text' => 'GET STARTED',
+            'title' => 'Une question sans réponse ?',
+            'button_text' => 'COMMENCER',
             'button_url' => '',
             'background_img' => 'default_faq_bottom_img.jpg',
         ]);

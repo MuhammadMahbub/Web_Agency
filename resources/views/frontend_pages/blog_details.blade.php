@@ -25,7 +25,7 @@
                 <h1> {{ titlesettings()->blog_details_title }}</h1>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item">
-                        <a href="{{ route('root') }}">Home</a>
+                        <a href="{{ route('root') }}">Accueil</a>
                     </li>
                     <li class="breadcrumb-item">
                         <a href="{{ route('blog') }}"> {{ titlesettings()->blog_title }}</a>
@@ -57,7 +57,7 @@
                         <div class="col-md-2">
                             <div class="like">
                                 <i class="fa fa-heart color-main fs-14"></i>
-                                <a href="{{ route('blog.like',$blog_details->id) }}"><h3>like this post</h3></a>
+                                <a href="{{ route('blog.like',$blog_details->id) }}">comme ce post</a>
                             </div>
                         </div>
                     </div>
@@ -69,9 +69,9 @@
                         <i class="fa fa-eye color-main fs-14"></i>
                         {{-- <a class="url fn n" href="#">154 views</a> --}}
                         <i class="fa fa-comments color-main fs-14"></i>
-                        <a class="url fn n" href="#">{{ $comment_count }} comments</a>
+                        <a class="url fn n" href="#">{{ $comment_count }} commentaires</a>
                         <i class="fa fa-heart color-main fs-14"></i>
-                        <a class="url fn n" href="#">{{ $likes }} Likes</a>
+                        <a class="url fn n" href="#">{{ $likes }} Aime</a>
                     </div>
 
                     <div class="item-media post-thumbnail">
@@ -141,8 +141,8 @@
 
                                     <div class="post-nav-text-wrap">
 
-                                        <span class="screen-reader-text">Previous Post</span>
-                                        <span aria-hidden="true" class="nav-subtitle color-main prev-post">Previous Post</span>
+                                        <span class="screen-reader-text">Article précédent</span>
+                                        <span aria-hidden="true" class="nav-subtitle color-main prev-post">Article précédent</span>
                                         @if($prev)
                                         <p class="nav-title">
                                             <span> <a href="{{ route('single.blog.details',$prev->slug) }}">
@@ -159,15 +159,15 @@
                             <div class="nav-next ds next">
 
                                 <div class="post-nav-text-wrap">
-                                    <span class="screen-reader-text">Next Post</span>
-                                    <span aria-hidden="true" class="nav-subtitle color-main next-post">Next Post</span>
+                                    <span class="screen-reader-text">Article suivant</span>
+                                    <span aria-hidden="true" class="nav-subtitle color-main next-post">Article suivant</span>
                                     @if($next)
                                     <p class="nav-title">
                                             <span><a href="{{ route('single.blog.details',$next->slug) }}"></a></span>{{ $next->title }}
                                     </p>
                                     @else
                                     <p class="nav-title">
-                                        No Post
+                                        Pas de poste
                                     </p>
                                     @endif
                                 </div>
@@ -179,7 +179,7 @@
 
                 <div class="related-posts">
                     <h4>
-                        Related Posts
+                        Postes connexes
                     </h4>
                     @if (count($related_blogs)>0)
                     <div class="row c-gutter-30 mb-25">
@@ -203,14 +203,14 @@
                     </div>
                     @else
                     <div class="row c-gutter-30 mb-25">
-                        <h3 class="text-danger m-auto">No Related Posts</h3>
+                        <h3 class="text-danger m-auto">Aucun article connexe</h3>
                     </div>
                     @endif
                 </div>
 
                 <div id="comments" class="comments-area comment1">
                     <h4 class="comments-title">
-                        Comments
+                        Commentaires
                     </h4>
                     <ol class="comment-list">
 
@@ -257,30 +257,30 @@
                             <div id="respond" class=" comment-respond ms">
                                 <form action="{{ route('blogcomment.store') }}" method="post" class="comment-form">
                                     @csrf
-                            <input type="hidden" name="blog_id" value="{{ $blog_details->id }}">
+                                    <input type="hidden" name="blog_id" value="{{ $blog_details->id }}">
                                     <div class="row c-gutter-20">
                                         <div class="col-md-6">
                                             <p class="comment-form-author ">
-                                                <input id="name" name="name" type="text" value="" size="30" maxlength="245" aria-required="true" required="required" class="form-control" placeholder="Full Name">
+                                                <input id="name" name="name" type="text" value="" size="30" maxlength="245" aria-required="true" required="required" class="form-control" placeholder="Nom complet">
                                             </p>
                                         </div>
                                         <div class="col-md-6">
                                             <p class="comment-form-email">
-                                                <input id="phone" name="phone" type="text" value="" size="30" maxlength="100" aria-required="true" placeholder="Phone Number" class="form-control">
+                                                <input id="phone" name="phone" type="text" value="" size="30" maxlength="100" aria-required="true" placeholder="Numéro de téléphone" class="form-control">
                                             </p>
                                         </div>
                                         <div class="col-md-12">
                                             <p class="comment-form-email">
-                                                <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-required="true" required="required" placeholder="Email Adress" class="form-control">
+                                                <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-required="true" required="required" placeholder="Adresse électronique" class="form-control">
                                             </p>
                                         </div>
                                     </div>
 
                                     <p class="comment-form-comment">
-                                        <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" aria-required="true" required="required" placeholder="Your comment" class="form-control"></textarea>
+                                        <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" aria-required="true" required="required" placeholder="Votre commentaire" class="form-control"></textarea>
                                     </p>
                                     <div class="form-submit">
-                                        <input name="submit" type="submit" class="submit" value="Post A Comment">
+                                        <input name="submit" type="submit" class="submit" value="Poster un commentaire">
                                     </div>
                                 </form>
                             </div>
@@ -292,25 +292,25 @@
 
             <aside class="col-lg-5 col-xl-4 order-lg-1">
                 <div class="widget widget_search ds texture-ds">
-                    <h6>Search</h6>
+                    <h6>Recherche</h6>
                     <form action="{{ route('search.blogs') }}" method="GET" id="search_form_details">
-                        <input type="search" id="search-form-widget" name="search_value" class="text-left search-field form-control" placeholder="Search Keyword">
+                        <input type="search" id="search-form-widget" name="search_value" class="text-left search-field form-control" placeholder="Recherche de mots-clés">
                         <button type="submit" class="search-submit" id="home_search_details">
-                            <span class="screen-reader-text">Search</span>
+                            <span class="screen-reader-text">Recherche</span>
                         </button>
                     </form>
                 </div>
 
                 <div class="categories-dropdown">
                     <div class="widget widget_categories dropdown">
-                        <h3 class="widget-title">Categories</h3>
+                        <h3 class="widget-title">Catégories</h3>
                         <label class="screen-reader-text" for="cat">
-                            Categories dropdown
+                            Liste déroulante des catégories
                         </label>
                         <form action="{{ route('cat.wise.blogs') }}" method="GET" id="cat_search_form">
                             @csrf
                         <select class="postform" id="category_wise_blog" name="search_value">
-                            <option>Select Category</option>
+                            <option>Sélectionnez une catégorie</option>
                                 @foreach ($blog_categories as $item)
                                  <option class="level-0" value="{{ $item->id }}">{{ $item->category_name }}</option>
                                 @endforeach
@@ -321,7 +321,7 @@
 
                 <div class="widget widget_slider">
 
-                    <h3 class="widget-title">Recent Posts</h3>
+                    <h3 class="widget-title">Messages récents</h3>
                     <div class="item-media">
                         <div class="owl-carousel gallery-owl-nav" data-nav="true" data-loop="false" data-autoplay="true" data-items="1" data-responsive-lg="1" data-responsive-md="1" data-responsive-sm="1" data-responsive-xs="1">
 

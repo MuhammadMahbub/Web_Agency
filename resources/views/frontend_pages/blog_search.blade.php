@@ -13,7 +13,7 @@
                 <h6 class="fw-500">
                     <a href="{{ route('single.blog.details',$item->slug) }}">{{ $item->title }}</a>
                 </h6>
-                <span style="color: var(--theme-color)">Category: </span><span><a href="{{ route('cate.wise.blogs',$item->relationtoblogcategory->id ) }}">{{ $item->relationtoblogcategory->category_name }}</a></span>
+                <span style="color: var(--theme-color)">Catégorie: </span><span><a href="{{ route('cate.wise.blogs',$item->relationtoblogcategory->id ) }}">{{ $item->relationtoblogcategory->category_name }}</a></span>
                 <p>
                     {{  \Str::limit( $item->s_description, 50)}}
                 </p>

@@ -1,7 +1,7 @@
 @extends('frontend_master.frontend_master')
 
 @section('frontend_title')
-     Home
+    Accueil
 @endsection
 
 
@@ -13,7 +13,7 @@ active
     <form action="{{ route('search.blogs') }}" method="GET" id="search_form">
       {{-- @csrf --}}
         <div class="search-box">
-            <input type="text" placeholder="search Blog" name="search_value" class="search-text">
+            <input type="text" placeholder="Blog de recherche" name="search_value" class="search-text">
             <a class="search-btn" id="home_search">
                 <i class="fa fa-search" ></i>
             </a>
@@ -278,7 +278,7 @@ active
                     <div class="row justify-content-center">
                         <div class="col-md-10 col-xl-5">
                             <div class="filters gallery-filters small-text text-lg-right">
-                                <a href="#" data-filter="*" class="active selected">All</a>
+                                <a href="#" data-filter="*" class="active selected">Tous</a>
                                 @foreach ($gallery_name as $item)
                                 <a href="#" data-filter=".gallery_{{ $item->id }}">{{$item->gallery_name}}</a>
                                 @endforeach

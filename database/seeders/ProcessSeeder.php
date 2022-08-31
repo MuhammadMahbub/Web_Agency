@@ -16,29 +16,29 @@ class ProcessSeeder extends Seeder
     public function run()
     {
         Process::create([
-            'title' => 'Development',
-            'description' => 'We use strategic marketing tactics that have been proven to work.We use strategic marketing tactics that have been proven to work.',
+            'title' => 'Développement',
+            'description' => "Nous utilisons des tactiques de marketing stratégique dont l'efficacité a été prouvée.",
             'process_photo' => 'process2.jpg',
             'created_at' => Carbon::now(),
         ]);
 
         Process::create([
             'title' => 'Design',
-            'description' => 'We use strategic marketing tactics that have been proven to work.We use strategic marketing tactics that have been proven to work.',
+            'description' => "Nous utilisons des tactiques de marketing stratégique dont l'efficacité a été prouvée.",
             'process_photo' => 'process4.jpg',
             'created_at' => Carbon::now(),
         ]);
 
         Process::create([
-            'title' => 'Support',
-            'description' => 'We use strategic marketing tactics that have been proven to work.We use strategic marketing tactics that have been proven to work.',
+            'title' => 'Soutien',
+            'description' => "Nous utilisons des tactiques de marketing stratégique dont l'efficacité a été prouvée.",
             'process_photo' => 'process1.jpg',
             'created_at' => Carbon::now(),
         ]);
 
         Process::create([
-            'title' => 'Strategy',
-            'description' => 'We use strategic marketing tactics that have been proven to work.We use strategic marketing tactics that have been proven to work.',
+            'title' => 'Stratégie',
+            'description' => "Nous utilisons des tactiques de marketing stratégique dont l'efficacité a été prouvée.",
             'process_photo' => 'process3.jpg',
             'created_at' => Carbon::now(),
         ]);

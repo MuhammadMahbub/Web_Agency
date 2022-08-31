@@ -16,33 +16,33 @@ class ReviewSeeder extends Seeder
     public function run()
     {
         Review::create([
-            'company_name' => 'Eye Insurance',
+            'company_name' => 'Assurance des yeux',
             'name' => 'merGeorge M. Batyketing',
-            'comment' => 'I needed more leads for my services. Pay-per-click, banners of maybe even broschures. They made an analysis of my existing site. It occurred that my webdite is banned with Google, and I never knew about that!',
+            'comment' => "J'avais besoin de plus de prospects pour mes services. Pay-per-click, bannières et peut-être même des brochures. Ils ont fait une analyse de mon site existant. Il s'est avéré que mon site est interdit par Google, et je ne le savais pas !",
             'image' => 'review1.jpg',
             'created_at' => Carbon::now(),
         ]);
 
         Review::create([
-            'company_name' => 'Rajiur Rahman',
+            'company_name' => 'Assurance-vie',
             'name' => 'merGeorge M. Batyketing',
-            'comment' => 'I needed more leads for my services. Pay-per-click, banners of maybe even broschures. They made an analysis of my existing site. It occurred that my webdite is banned with Google, and I never knew about that!',
+            'comment' => "J'avais besoin de plus de prospects pour mes services. Pay-per-click, bannières et peut-être même des brochures. Ils ont fait une analyse de mon site existant. Il s'est avéré que mon site est interdit par Google, et je ne le savais pas !",
             'image' => 'review2.jpg',
             'created_at' => Carbon::now(),
         ]);
 
         Review::create([
-            'company_name' => 'Tareq Rahman',
+            'company_name' => 'assurance-accident',
             'name' => 'merGeorge M. Batyketing',
-            'comment' => 'I needed more leads for my services. Pay-per-click, banners of maybe even broschures. They made an analysis of my existing site. It occurred that my webdite is banned with Google, and I never knew about that!',
+            'comment' => "J'avais besoin de plus de prospects pour mes services. Pay-per-click, bannières et peut-être même des brochures. Ils ont fait une analyse de mon site existant. Il s'est avéré que mon site est interdit par Google, et je ne le savais pas !",
             'image' => 'review3.jpg',
             'created_at' => Carbon::now(),
         ]);
 
         Review::create([
-            'company_name' => 'Mahbub Rahman',
+            'company_name' => "Sauver l'assurance-vie",
             'name' => 'merGeorge M. Batyketing',
-            'comment' => 'I needed more leads for my services. Pay-per-click, banners of maybe even broschures. They made an analysis of my existing site. It occurred that my webdite is banned with Google, and I never knew about that!',
+            'comment' => "J'avais besoin de plus de prospects pour mes services. Pay-per-click, bannières et peut-être même des brochures. Ils ont fait une analyse de mon site existant. Il s'est avéré que mon site est interdit par Google, et je ne le savais pas !",
             'image' => 'review4.jpg',
             'created_at' => Carbon::now(),
         ]);

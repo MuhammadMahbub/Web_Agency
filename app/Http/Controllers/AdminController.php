@@ -60,17 +60,82 @@ class AdminController extends Controller
 
         // return view('admin.index',compact('browser', 'today_page_views', 'unique_users', 'top_pages', 'total', 'date','subs'));
 
+        $total_blogs = [];
+        $total_services = [];
+
+        for ($i=1; $i <=12 ; $i++) {
+            $total_blogs []  = Blog::whereYear('created_at', date('Y'))->whereMonth('created_at', $i)->count();
+            $total_services []  = Service::whereYear('created_at', date('Y'))->whereMonth('created_at', $i)->count();
+        }
 
         return view('admin.index',[
-            'service'       => Service::all(),
-            'testimonial'   => Testimonial::all(),
-            'message'   => ClientMessage::all(),
-            'team'   => Team::all(),
-            'blog'   => Blog::all(),
-            'gallery'   => Gallery::all(),
+            'users'          => User::all(),
+            'service'        => Service::all(),
+            'testimonial'    => Testimonial::all(),
+            'message'        => ClientMessage::all(),
+            'team'           => Team::all(),
+            'blog'           => Blog::all(),
+            'gallery'        => Gallery::all(),
+            'total_blogs'    => $total_blogs,
+            'total_services' => $total_services,
         ]);
 
-    // End    
+    // End
+    }
+
+    public function day_change_admin(Request $request){
+
+        $search_data = $request->data;
+
+        if($search_data == 'year'){
+
+            $total_blogs = [];
+
+            for ($i=1; $i <=12 ; $i++) {
+                $total_blogs []  = Blog::whereYear('created_at', date('Y'))
+                                       ->whereMonth('created_at', $i)
+                                       ->count();
+            }
+
+            $data = view('admin.includes.day_change_admin', compact('total_blogs','search_data'))->render();
+            return response()->json(['data' => $data]);
+
+        }elseif($search_data == 'month') {
+
+            $total_blogs = [];
+            $all_days    = [];
+            $total_days  = Carbon::now()->daysInMonth;
+
+            for ($i=1; $i <= $total_days ; $i++) {
+
+                $total_blogs  []  = Blog::whereYear('created_at', date('Y'))
+                                        ->whereMonth('created_at', date('m'))
+                                        ->whereDay('created_at', $i)
+                                        ->count();
+                $all_days [] = $i;
+            }
+
+            $data = view('admin.includes.day_change_admin', compact('total_blogs', 'search_data', 'all_days'))->render();
+            return response()->json(['data' => $data]);
+
+        }else{
+            return $date = \Carbon\Carbon::today()->subDays(7);
+
+            // $total_blogs = [];
+            // $total_days  = Carbon::now()->daysInMonth;
+
+            // for ($i=1; $i <= $total_days; $i++) {
+
+            //     $total_blogs  []  = Blog::whereYear('created_at', date('Y'))
+            //                             ->whereMonth('created_at', date('m'))
+            //                             ->whereDay('created_at', $i)
+            //                             ->count();
+            //     $all_days [] = $i;
+            // }
+
+            // $data = view('admin.includes.day_change_admin', compact('total_blogs', 'search_data', 'all_days'))->render();
+            // return response()->json(['data' => $data]);
+        }
     }
 
     // User List
@@ -90,8 +155,8 @@ class AdminController extends Controller
     // user store function for create new user
     public function userStore(Request $request){
         $request->validate([
-            'name'   => 'required',
-            'email'  => "required|unique:users|email",
+            'name'      => 'required',
+            'email'     => "required|unique:users|email",
             'password'  => 'required',
         ]);
 
@@ -100,8 +165,8 @@ class AdminController extends Controller
         $user_password = $request->password;
 
         User::insert([
-            'name' => $user_name,
-            'email' => $user_email,
+            'name'     => $user_name,
+            'email'    => $user_email,
             'password' => bcrypt($user_password),
         ]);
 
@@ -124,7 +189,7 @@ class AdminController extends Controller
         $user_email = $request->email;
 
         User::find($id)->update([
-            'name' => $user_name,
+            'name'  => $user_name,
             'email' => $user_email,
         ]);
 
@@ -132,7 +197,7 @@ class AdminController extends Controller
     }
 
 
-    
+
      // User Delete
     public function userDestroy($id){
 
@@ -142,5 +207,5 @@ class AdminController extends Controller
 
         return back()->withSuccess('User deleted');
     }
-    
+
 }

@@ -19,7 +19,7 @@ active
                 </h1>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item">
-                        <a href="{{ route('root') }}">Home</a>
+                        <a href="{{ route('root') }}">Accueil</a>
                     </li>
 
                     <li class="breadcrumb-item active">

@@ -16,9 +16,9 @@ class CreateStartProjectsTable extends Migration
         Schema::create('start_projects', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('meta_title');
-            $table->string('button_text');
-            $table->string('button_url');
+            $table->string('meta_title')->nullable();
+            $table->string('button_text')->nullable();
+            $table->string('button_url')->nullable();
             $table->timestamps();
         });
     }

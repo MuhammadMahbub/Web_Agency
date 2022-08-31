@@ -32,10 +32,26 @@ class GalleryController extends Controller
 
         GalleryName::insert([
             'gallery_name' => $request->gallery_name,
+            'gallery_name' => $request->gallery_name,
             'created_at'   => Carbon::now(),
         ]);
 
         return redirect()->route('gallery_name.index');
+    }
+
+    public function gallery_name_update(Request $request, $id)
+    {
+        $request->validate([
+            'gallery_name' => 'required',
+        ]);
+        $updatableData = GalleryName::find($id);
+        $updatableData->update([
+            'gallery_name' => $request->gallery_name,
+            // 'gallery_title' => $request->gallery_title,
+            'created_at'   => Carbon::now(),
+        ]);
+
+        return redirect()->route('gallery_name.index')->with('success', 'Data updated Success');;
     }
 
     public function gallery_name_destroy($id)
@@ -99,7 +115,7 @@ class GalleryController extends Controller
 
     public function update(Request $request, Gallery $gallery)
     {
-        //
+       //
     }
 
     public function destroy(Gallery $gallery)

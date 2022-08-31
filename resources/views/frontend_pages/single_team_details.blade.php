@@ -12,7 +12,7 @@
                     <h1>{{ titlesettings()->team_details_title }}</h1>
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item">
-                            <a href="{{ route('root') }}">Home</a>
+                            <a href="{{ route('root') }}">Accueil</a>
                         </li>
                         <li class="breadcrumb-item">
                             <a href="{{ route('team') }}">{{ titlesettings()->team_title }}</a>
@@ -132,7 +132,7 @@
                             {{-- i am here --}}
                             @if (session('success'))
                                 <div class="alert alert-success alert-dismissible fade show" role="alert">
-                                    <strong>Thanks!</strong> {{ session('success') }}
+                                    <strong>Merci!</strong> {{ session('success') }}
                                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                       <span aria-hidden="true">&times;</span>
                                     </button>
@@ -174,10 +174,10 @@
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="form-group has-placeholder">
-                                            <label for="name">Full Name
+                                            <label for="name">Nom complet
                                                 <span class="required">*</span>
                                             </label>
-                                            <input type="text" name="client_name" id="client_name" class="form-control" placeholder="Full Name" value="{{ old('client_name') }}">
+                                            <input type="text" name="client_name" id="client_name" class="form-control" placeholder="Nom complet" value="{{ old('client_name') }}">
                                             @error('client_name')
                                                 <span class="text-danger">{{ $message }}</span>
                                             @enderror
@@ -186,10 +186,10 @@
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group has-placeholder">
-                                            <label for="email">Email address
+                                            <label for="email">Adresse électronique
                                                 <span class="required">*</span>
                                             </label>
-                                            <input type="email" aria-required="true" size="30" value="{{ old('client_email') }}" name="client_email" id="email" class="form-control" placeholder="Email Adress">
+                                            <input type="email" aria-required="true" size="30" value="{{ old('client_email') }}" name="client_email" id="email" class="form-control" placeholder="Adresse électronique">
                                             @error('client_email')
                                                 <span class="text-danger">{{ $message }}</span>
                                             @enderror
@@ -199,10 +199,10 @@
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="form-group has-placeholder">
-                                            <label for="phone">Phone Number
+                                            <label for="phone">Numéro de téléphone
                                                 <span class="required">*</span>
                                             </label>
-                                            <input type="text" aria-required="true" size="30" name="client_phone" id="phone" class="form-control" placeholder="Phone Number" value="{{ old('client_phone') }}">
+                                            <input type="text" aria-required="true" size="30" name="client_phone" id="phone" class="form-control" placeholder="Numéro de téléphone" value="{{ old('client_phone') }}">
 
                                             @error('client_phone')
                                                 <span class="text-danger">{{ $message }}</span>
@@ -214,10 +214,10 @@
 
                                     <div class="col-sm-6">
                                         <div class="form-group has-placeholder">
-                                            <label for="subject">Your Subject
+                                            <label for="subject">Votre sujet
                                                 <span class="required">*</span>
                                             </label>
-                                            <input type="text" aria-required="true" size="30" value="{{ old('client_phone') }}" name="message_subject" id="subject" class="form-control" placeholder="Your Topic">
+                                            <input type="text" aria-required="true" size="30" value="{{ old('client_phone') }}" name="message_subject" id="subject" class="form-control" placeholder="Votre sujet">
                                             @error('message_subject')
                                                 <span class="text-danger">{{ $message }}</span>
                                             @enderror
@@ -227,8 +227,8 @@
                                 <div class="row">
                                     <div class="col-sm-12">
                                         <div class="form-group has-placeholder">
-                                            <label for="message">Your Message</label>
-                                            <textarea aria-required="true" rows="6" cols="45" name="message_details" id="message_details" class="form-control" placeholder="Your Message">
+                                            <label for="message">Votre message</label>
+                                            <textarea aria-required="true" rows="6" cols="45" name="message_details" id="message_details" class="form-control" placeholder="Votre message">
                                                 {{ old('client_phone') }}
                                             </textarea>
                                             @error('message_details')
@@ -241,7 +241,7 @@
                                     <div class="col-sm-12 mt-15">
                                         <div class="form-group">
 
-                                            <button type="submit"> Send Message </button>
+                                            <button type="submit"> Envoyer un message </button>
                                         </div>
                                     </div>
                                 </div>
@@ -315,7 +315,7 @@
             <div class="row">
                 <div class="col-sm-12">
                     <h4>
-                        Our Experts
+                        Nos experts
                     </h4>
                     <div class="owl-carousel top-right-nav" data-responsive-lg="3" data-responsive-md="2" data-responsive-sm="2" data-nav="true" data-dots="false" data-loop="true" data-margin="" data-nav-prev="<span>prev</span>" data-nav-next="<span>next</span>">
 

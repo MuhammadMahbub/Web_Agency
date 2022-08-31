@@ -16,8 +16,8 @@ class CreateFaqUnanswerQSTable extends Migration
         Schema::create('faq_unanswer_q_s', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('button_text');
-            $table->string('button_url');
+            $table->string('button_text')->nullable();
+            $table->string('button_url')->nullable();
             $table->string('background_img')->nullable();
             $table->timestamps();
         });

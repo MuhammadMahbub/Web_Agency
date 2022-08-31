@@ -17,28 +17,28 @@ class AboutBackImgSeeder extends Seeder
     {
         AboutBackImg::create([
             'name' => 'Letha L. Young',
-            'post' => 'Marketer',
+            'post' => 'Commercialisateur',
             'back_img' => 'about_back_image_background1.jpg',
             'created_at' => Carbon::now(),
         ]);
 
         AboutBackImg::create([
             'name' => 'Harold D. Cote ',
-            'post' => 'Developer',
+            'post' => 'Développeur',
             'back_img' => 'about_back_image_background2.jpg',
             'created_at' => Carbon::now(),
         ]);
 
         AboutBackImg::create([
             'name' => 'Letha L. Young',
-            'post' => 'Marketer',
+            'post' => 'Commercialisateur',
             'back_img' => 'about_back_image_background3.jpg',
             'created_at' => Carbon::now(),
         ]);
 
         AboutBackImg::create([
             'name' => 'Harold D. Cote ',
-            'post' => 'Developer',
+            'post' => 'Développeur',
             'back_img' => 'about_back_image_background4.jpg',
             'created_at' => Carbon::now(),
         ]);

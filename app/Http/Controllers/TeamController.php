@@ -19,7 +19,7 @@ class TeamController extends Controller
     public function index()
     {
         $all_teams_data = Team::all();
-        
+
         return view('admin.team.index', compact('all_teams_data'));
     }
 
@@ -53,7 +53,7 @@ class TeamController extends Controller
 
         $member_name = $request->member_name;
         $team_slug = Str::slug($member_name).'-'.Str::random(15);
-        
+
         $team = Team::create($request->except('_token') + ['created_at' => Carbon::now(), 'team_slug' => $team_slug]);
 
         if($request->file('member_photo')){
@@ -105,7 +105,7 @@ class TeamController extends Controller
             'member_details'       => 'required',
             'member_phone'         => 'required',
             'member_email'         => 'required',
-            'member_photo'         => 'required|image',
+            'member_photo'         => 'image',
         ]);
 
         $team->update($request->except('_token') + ['updated_at' => Carbon::now()]);

@@ -16,27 +16,27 @@ class BlogCategorySeeder extends Seeder
     public function run()
     {
         BlogCategory::create([
-            'category_name' => 'Corporate',
+            'category_name' => 'Entreprise',
             'created_at' => Carbon::now(),
         ]);
 
         BlogCategory::create([
-            'category_name' => 'Business ',
+            'category_name' => 'Entreprise ',
             'created_at' => Carbon::now(),
         ]);
 
         BlogCategory::create([
-            'category_name' => 'Entetainment',
+            'category_name' => 'Divertissement',
             'created_at' => Carbon::now(),
         ]);
 
         BlogCategory::create([
-            'category_name' => 'News',
+            'category_name' => 'Nouvelles',
             'created_at' => Carbon::now(),
         ]);
 
         BlogCategory::create([
-            'category_name' => 'Education',
+            'category_name' => 'Éducation',
             'created_at' => Carbon::now(),
         ]);
     }

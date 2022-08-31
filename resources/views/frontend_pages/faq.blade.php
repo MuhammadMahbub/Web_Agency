@@ -14,7 +14,7 @@ active
                     <h1>{{ titlesettings()->faq_title }}</h1>
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item">
-                            <a href="{{ route('root') }}">Home</a>
+                            <a href="{{ route('root') }}">Accueil</a>
                         </li>
 
                         <li class="breadcrumb-item active">
@@ -112,7 +112,7 @@ active
                             {{ $get_faq_bottom_data->title }}
                         </h4>
                         <div class="divider-40 d-none d-xl-block"> </div>
-                        <a href="{{ route('contact/us') }}" class="btn btn-maincolor">{{ $get_faq_bottom_data->button }}</a>
+                        <a href="{{ route('contact/us') }}" class="btn btn-maincolor">{{ $get_faq_bottom_data->button_text }}</a>
                     </div>
                 </div>
             </div>

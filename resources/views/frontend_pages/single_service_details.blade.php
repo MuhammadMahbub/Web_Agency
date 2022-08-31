@@ -11,7 +11,7 @@
                     <h1> {{ titlesettings()->service_details_title }}</h1>
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item">
-                            <a href="{{ route('root') }}">Home</a>
+                            <a href="{{ route('root') }}">Accueil</a>
                         </li>
                         <li class="breadcrumb-item">
                             <a href="{{ route('service') }}"> {{ titlesettings()->service_title }}</a>
@@ -56,15 +56,15 @@
     <section id="section_testimonials" class="s-pt-50 s-pb-130 ls ms service-single-testimonials">
         <div class="divider-70 d-none d-lg-block"></div>
         <div class="container">
-            
+
             <div class="row">
                 <div class="col-md-12">
                     <div class="special-heading text-center">
                         <h4>
-                            
+
                                 {{ titlesettings()->testimonial_title }}
-                            
-                            
+
+
                         </h4>
                     </div>
                     <div class="testimonials-slider owl-carousel" data-autoplay="false" data-responsive-lg="3" data-responsive-md="1" data-responsive-sm="1" data-nav="false" data-dots="true">

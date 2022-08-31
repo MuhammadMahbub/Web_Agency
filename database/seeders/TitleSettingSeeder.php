@@ -16,17 +16,17 @@ class TitleSettingSeeder extends Seeder
     public function run()
     {
         TitleSetting::create([
-            'about_title'              => 'About',
+            'about_title'              => 'À propos de',
             'service_title'            => 'Service',
-            'service_details_title'    => 'Service Details',
+            'service_details_title'    => 'Détails du service',
             'blog_title'               => 'Blogs',
-            'blog_details_title'       => 'Blog Details',
-            'team_title'               => 'Teams',
-            'team_details_title'       => 'Team Details',
-            'testimonial_title'        => 'Testimonials',
+            'blog_details_title'       => 'Détails du blog',
+            'team_title'               => 'Équipes',
+            'team_details_title'       => "Détails de l'équipe",
+            'testimonial_title'        => 'Témoignages',
             'contact_title'            => 'Contacts',
             'faq_title'                => 'FAQ',
-            'feature_title'            => 'Features',
+            'feature_title'            => 'Caractéristiques',
             'gallery_title'            => 'Galleries',
         ]);
     }

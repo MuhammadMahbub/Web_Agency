@@ -17,20 +17,20 @@ class BannerSeeder extends Seeder
     {
         Banner::create([
             'image' => 'default_banner1.jpg',
-            'title_one' => 'WELCOME TO',
-            'title_two' => 'IT AGENCY',
-            'title_three' => 'Marketing & Branding',
-            'button_text' => 'GET STARTED',
+            'title_one' => 'BIENVENUE',
+            'title_two' => 'AGENCE TI',
+            'title_three' => 'Marketing et image de marque',
+            'button_text' => 'COMMENCER',
             'button_url' => '',
             'created_at' => Carbon::now(),
         ]);
 
         Banner::create([
             'image' => 'default_banner2.jpg',
-            'title_one' => 'Online',
+            'title_one' => 'En ligne',
             'title_two' => 'MARKETING',
             'title_three' => 'SOLUTION',
-            'button_text' => 'GET STARTED',
+            'button_text' => 'COMMENCER',
             'button_url' => '',
             'created_at' => Carbon::now(),
         ]);

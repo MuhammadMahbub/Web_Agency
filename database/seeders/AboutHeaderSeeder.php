@@ -17,9 +17,9 @@ class AboutHeaderSeeder extends Seeder
     {
 
         AboutHeader::create([
-            'heading'    => 'We love what we do and we love helping others succeed at what they love',
+            'heading'    => "Nous aimons ce que nous faisons et nous aimons aider les autres à réussir dans ce qu'ils aiment.",
             'name'       => 'Gregory F. Parrino',
-            'post'       => 'CEO',
+            'post'       => 'PDG',
             'created_at' => Carbon::now(),
         ]);
     }

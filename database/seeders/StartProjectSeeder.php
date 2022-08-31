@@ -15,9 +15,9 @@ class StartProjectSeeder extends Seeder
     public function run()
     {
         StartProject::create([
-            'title' => 'Lets Get Started Your Project',
-            'meta_title' => 'We’ll help to achieve your goals and to grow business',
-            'button_text' => 'Lets Talk',
+            'title' => 'Commençons votre projet',
+            'meta_title' => 'Nous vous aiderons à atteindre vos objectifs et à développer votre activité.',
+            'button_text' => 'Parlons-en',
             'button_url' => '',
         ]);
     }

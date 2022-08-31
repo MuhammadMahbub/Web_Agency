@@ -19,7 +19,7 @@ class CreateBuyNowsTable extends Migration
             $table->string('title');
             $table->string('description');
             $table->string('buy_now_link');
-            $table->string('buy_now_url');
+            $table->string('buy_now_url')->nullable();
             $table->timestamps();
         });
     }

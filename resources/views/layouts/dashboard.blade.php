@@ -10,51 +10,35 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="author" content="Digital Tech">
+    <link rel="shortcut icon" href="{{ asset('uploads/images/generalSetting/') }}/{{ generalSettings()->favicon }}" type="image/x-icon">
+    {{-- <link rel="apple-touch-icon" href="{{ asset('uploads/generalSettings') }}/{{ generalSettings()->favicon }}"> --}}
 
     <title>{{ config('app.name') }} |@yield('title')</title>
 
 
-    <link rel="apple-touch-icon" href="{{ asset('uploads/generalSettings') }}/{{ generalSettings()->favicon }}">
-    <link rel="shortcut icon" type="image/x-icon"
-        href="{{ asset('uploads/generalSettings') }}/{{ generalSettings()->favicon }}">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600" rel="stylesheet">
 
     <!-- BEGIN: Vendor CSS-->
     <link rel="stylesheet" type="text/css" href="{{ asset('dashboard_assets/app-assets/vendors/css/vendors.min.css') }}">
-    <link rel="stylesheet" type="text/css"
-        href="{{ asset('dashboard_assets/app-assets/css/plugins/charts/chart-apex.css') }}">
-    <link rel="stylesheet" type="text/css"
-        href="{{ asset('dashboard_assets/app-assets/vendors/css/tables/datatable/dataTables.bootstrap4.min.css') }}">
-    <link rel="stylesheet" type="text/css"
-        href="{{ asset('dashboard_assets/app-assets/vendors/css/tables/datatable/responsive.bootstrap4.min.css') }}">
-    <link rel="stylesheet" type="text/css"
-        href="{{ asset('dashboard_assets/app-assets/vendors/css/tables/datatable/buttons.bootstrap4.min.css') }}">
-    <link rel="stylesheet" type="text/css"
-        href="{{ asset('dashboard_assets/app-assets/vendors/css/tables/datatable/rowGroup.bootstrap4.min.css') }}">
-    <link rel="stylesheet" type="text/css"
-        href="{{ asset('dashboard_assets/app-assets/vendors/css/pickers/flatpickr/flatpickr.min.css') }}">
-    <link rel="stylesheet" type="text/css"
-        href="{{ asset('dashboard_assets/app-assets/vendors/css/extensions/toastr.min.css') }}">
-    <link rel="stylesheet" type="text/css"
-        href="{{ asset('dashboard_assets/app-assets/css/plugins/extensions/ext-component-toastr.css') }}">
-    <link rel="stylesheet" type="text/css"
-        href="{{ asset('dashboard_assets/app-assets/css/plugins/forms/form-validation.css') }}">
-    <link rel="stylesheet" type="text/css"
-        href="{{ asset('dashboard_assets/app-assets/vendors/css/forms/select/select2.min.css') }}">
-    <link rel="stylesheet" type="text/css"
-        href="{{ asset('dashboard_assets/app-assets/vendors/css/pickers/pickadate/pickadate.css') }}">
-    <link rel="stylesheet" type="text/css"
-        href="{{ asset('dashboard_assets/app-assets/css/plugins/forms/pickers/form-flat-pickr.css') }}">
-    <link rel="stylesheet" type="text/css"
-        href="{{ asset('dashboard_assets/app-assets/css/plugins/forms/pickers/form-pickadate.css') }}">
-
-        <script src="https://unpkg.com/@yaireo/tagify"></script>
-<script src="https://unpkg.com/@yaireo/tagify/dist/tagify.polyfills.min.js"></script>
-<link href="https://unpkg.com/@yaireo/tagify/dist/tagify.css" rel="stylesheet" type="text/css" />
-
+    <link rel="stylesheet" type="text/css" href="{{ asset('dashboard_assets/app-assets/css/plugins/charts/chart-apex.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('dashboard_assets/app-assets/vendors/css/tables/datatable/dataTables.bootstrap4.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('dashboard_assets/app-assets/vendors/css/tables/datatable/responsive.bootstrap4.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('dashboard_assets/app-assets/vendors/css/tables/datatable/buttons.bootstrap4.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('dashboard_assets/app-assets/vendors/css/tables/datatable/rowGroup.bootstrap4.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('dashboard_assets/app-assets/vendors/css/pickers/flatpickr/flatpickr.min.css') }}">
+    <link rel="stylesheet" type="text/css"  href="{{ asset('dashboard_assets/app-assets/vendors/css/extensions/toastr.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('dashboard_assets/app-assets/css/plugins/extensions/ext-component-toastr.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('dashboard_assets/app-assets/css/plugins/forms/form-validation.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('dashboard_assets/app-assets/vendors/css/forms/select/select2.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('dashboard_assets/app-assets/vendors/css/pickers/pickadate/pickadate.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('dashboard_assets/app-assets/css/plugins/forms/pickers/form-flat-pickr.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('dashboard_assets/app-assets/css/plugins/forms/pickers/form-pickadate.css') }}">
+    <link href="https://unpkg.com/@yaireo/tagify/dist/tagify.css" rel="stylesheet" type="text/css" />
 
     @yield('vendor.css')
+
+    <script src="https://unpkg.com/@yaireo/tagify"></script>
+    <script src="https://unpkg.com/@yaireo/tagify/dist/tagify.polyfills.min.js"></script>
 
     <!-- END: Vendor CSS-->
 
@@ -70,6 +54,7 @@
         href="{{ asset('dashboard_assets/app-assets/css/themes/bordered-layout.css') }}">
     <link rel="stylesheet" type="text/css"
         href="{{ asset('dashboard_assets/app-assets/css/themes/semi-dark-layout.css') }}">
+
     @yield('theme.css')
 
     <!-- BEGIN: Page CSS-->
@@ -91,6 +76,10 @@
             /* IE and Edge */
             scrollbar-width: none;
             /* Firefox */
+        }
+
+        .apexcharts-toolbar{
+            display: none !important;
         }
 
     </style>
@@ -695,10 +684,15 @@
                         </li>
                     </ul>
                 </li>
+                <li class="nav-item @yield('ContactUsCreate')">
+                    <a class="d-flex align-items-center" href="{{ route('contact_us.create') }}">
+                        <i data-feather="circle" class="@yield('contactUsSpinnerCreate')"></i>
+                        <span class="menu-item text-truncate" data-i18n="Add">{{ __('Contact us') }}</span>
+                    </a>
+                </li>
 
-                <li class=" nav-item">
+                {{-- <li class=" nav-item">
                     <a class="d-flex align-items-center" href="#">
-                        {{-- <i data-feather='user-check'></i> --}}
                         @yield('contactUsSpinner')
                         <i data-feather='phone'></i>
                         <span class="menu-title text-truncate" data-i18n="Invoice">{{ __('Gallery') }}</span>
@@ -711,7 +705,7 @@
                             </a>
                         </li>
                     </ul>
-                </li>
+                </li> --}}
 
 
 

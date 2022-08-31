@@ -48,7 +48,6 @@ class AboutController extends Controller
             'back_img' => 'image',
             'name'    => 'required',
             'post'   => 'required',
-            'button_text'   => 'required',
         ]);
 
         $about_img->update($request->except('_token') + ['updated_at' => Carbon::now()]);

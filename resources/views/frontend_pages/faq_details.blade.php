@@ -19,7 +19,7 @@
                             {{-- <a href="{{ route('faq') }}">FAQ</a> --}}
                         </li>
                         <li class="breadcrumb-item active">
-                            FAQ Details
+                            Détails de la FAQ
                         </li>
                     </ol>
                     <div class="divider-15 d-none d-xl-block"></div>
@@ -64,8 +64,8 @@
                 <div class="col-lg-12 m-auto ds-collapse">
 
                     <div id="accordion_parent" role="tablist">
-                    
-                        @foreach ($faq_all_datas as $item)  
+
+                        @foreach ($faq_all_datas as $item)
                             <div class="card">
                                 <div class="card-header" role="tab" id="collapse{{ $item->id }}_header">
                                     <h5>
@@ -96,7 +96,7 @@
                             </div>
                         @endforeach
 
-                        
+
 
                     </div>
                     <!-- collapse -->
@@ -109,7 +109,7 @@
     <section class="s-py-130 ls faq1-icon ls s-overlay pb-4">
 
         <div class="divider-50 d-none d-xl-block"></div>
-        
+
         <div class="divider-15 d-none d-xl-block"></div>
     </section>
 @endsection

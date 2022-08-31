@@ -16,23 +16,23 @@ class BuyNowSeeder extends Seeder
     {
         BuyNow::create([
             'image' => 'buy_image1.jpg',
-            'title' => 'Tools of Trading: Modern Marketing',
+            'title' => 'Les outils du commerce : Marketing moderne',
             'description' => 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam numy eirmod.',
-            'buy_now_link' => 'Buy It Now',
+            'buy_now_link' => 'Achetez-le maintenant',
             'buy_now_url' => '',
         ]);
         BuyNow::create([
             'image' => 'buy_image2.jpg',
-            'title' => 'Tools of Trading: Modern Marketing',
+            'title' => 'Les outils du commerce : Marketing moderne',
             'description' => 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam numy eirmod.',
-            'buy_now_link' => 'Buy It Now',
+            'buy_now_link' => 'Achetez-le maintenant',
             'buy_now_url' => '',
         ]);
         BuyNow::create([
             'image' => 'buy_image3.jpg',
-            'title' => 'Tools of Trading: Modern Marketing',
+            'title' => 'Les outils du commerce : Marketing moderne',
             'description' => 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam numy eirmod.',
-            'buy_now_link' => 'Buy It Now',
+            'buy_now_link' => 'Achetez-le maintenant',
             'buy_now_url' => '',
         ]);
     }

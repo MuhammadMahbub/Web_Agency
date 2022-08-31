@@ -16,11 +16,11 @@ class ButtonSeeder extends Seeder
     public function run()
     {
         Button::create([
-            'process_btn_text' => 'Get Start',
+            'process_btn_text' => 'Démarrer',
             'process_btn_url' => '',
-            'about_btn_text' => 'Get Start',
+            'about_btn_text' => 'Démarrer',
             'about_btn_url' => '',
-            'buy_btn_text' => 'Get Start',
+            'buy_btn_text' => 'Démarrer',
             'buy_btn_url' => '',
             'created_at' => Carbon::now(),
         ]);

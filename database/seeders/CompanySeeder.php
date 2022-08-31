@@ -16,9 +16,9 @@ class CompanySeeder extends Seeder
     public function run()
     {
         Company::create([
-            'title'=>'We are the one of the most effective Web Design Companies',
-            'description'=> 'Getting online is easy. Succeeding online is a different story. You’ll need more than just a beautiful website to stand out these days. Online marketing solutions. Conversion-based web design coupled with a lead generating marketing plan, your online success is inevitable.',
-            'button_text' => 'Get Started',
+            'title'=>"'Nous sommes l'une des entreprises de conception de sites Web les plus efficaces.",
+            'description'=> "Se mettre en ligne est facile. Réussir en ligne est une autre histoire. De nos jours, il vous faut plus qu'un beau site web pour vous démarquer. Des solutions de marketing en ligne. Une conception web basée sur la conversion, associée à un plan de marketing générant des prospects, votre succès en ligne est inévitable.",
+            'button_text' => 'Commencez',
             'button_url' => '',
             'created_at' => Carbon::now(),
         ]);

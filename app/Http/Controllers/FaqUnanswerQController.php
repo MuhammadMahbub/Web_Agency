@@ -74,7 +74,7 @@ class FaqUnanswerQController extends Controller
 
         $request->validate([
             'title'          => 'required',
-            'button_text'         => 'required',
+            'button_text'    => 'required',
             'background_img' => 'image',
         ]);
 

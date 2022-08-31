@@ -15,8 +15,8 @@ class MstretegySeeder extends Seeder
     public function run()
     {
         Mstretegy::create([
-            'title' => 'B2B Marketing & Web Design Resources',
-            'description' => 'B2B client acquisition is not the same as B2C– a B2B website, brand messaging and content marketing play a much different role. We understand the B2B marketing and sales funnel and the tactics that generate and nurture ideal client leads.',
+            'title' => 'Ressources pour le marketing et la conception de sites Web B2B',
+            'description' => "L'acquisition de clients B2B n'est pas la même que celle de clients B2C : un site Web B2B, le message de la marque et le marketing de contenu jouent un rôle très différent. Nous comprenons le marketing B2B et l'entonnoir de vente, ainsi que les tactiques qui génèrent et nourrissent les prospects idéaux.",
         ]);
     }
 }
